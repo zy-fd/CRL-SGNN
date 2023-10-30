@@ -3,7 +3,7 @@ from torch import nn
 import torch.nn.functional as F
 from torch_geometric.nn import SAGEConv
 from CRL_Conv import CRL_Conv
-
+# The demo is for networks of 1000 nodes. For other network sizes, the dimensionality of the fully connected layer needs to be modified to match the length of the controllability robustness sequence
 class CRL_SGNN(nn.Module):
     def __init__(self):
         super(CRL_SGNN, self).__init__()
