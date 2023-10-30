@@ -9,7 +9,7 @@ import scipy.sparse as ssp
 from CRL_SGNN import CRL_SGNN
 from loss import MultiLoss
 from crl_test import mean_error
-
+# The demo is for networks of 1000 nodes. For other network sizes, the dimensionality of the fully connected layer needs to be modified to match the length of the controllability robustness sequence
 def val(model,test_A,test_x,test_label,device):
     model.eval()
     loss_val1 = 0
