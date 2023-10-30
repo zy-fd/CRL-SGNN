@@ -10,7 +10,7 @@ class CRL_SGNN(nn.Module):
         self.Embedding_Generation_Module = Embedding_Generation_Module()
         self.Assistant = Assistant_Branch()
         self.Main = Main_Branch()
-        # 0.001 与999与500均为超参数，根据网络结构进行调整
+        
         physical_bias = 0.001*torch.ones(999,requires_grad=True)
         physical_bias[500:] = 0
         self.physical_bias = nn.Parameter(physical_bias)
